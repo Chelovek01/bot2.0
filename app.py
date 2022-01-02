@@ -33,6 +33,7 @@ def webhook():
         print("[X]", get_timestamp(), "Error:\n>", e)
         return "Error", 400
 
+    return 'aptapta'
 
 if __name__ == "__main__":
     from waitress import serve
