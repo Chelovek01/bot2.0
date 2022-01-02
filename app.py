@@ -1,11 +1,14 @@
 import json
 import time
-
+import os
+import sys
 from flask import Flask, request
 
 import config
 from handler import *
 
+
+sys.path.append('/home/bot/bot2.0/env/lib/python3.6/site-packages/')
 app = Flask(__name__)
 
 
@@ -14,7 +17,7 @@ def get_timestamp():
     return timestamp
 
 
-@app.route("/webhook", methods=["POST"])
+@app.route("/webhook")
 def webhook():
     try:
         if request.method == "POST":
