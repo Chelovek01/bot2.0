@@ -3,6 +3,7 @@ from telegram import Bot
 import config
 
 
+
 def send_alert(data):
     msg = data["msg"].encode("latin-1", "backslashreplace").decode("unicode_escape")
     if config.send_telegram_alerts:
